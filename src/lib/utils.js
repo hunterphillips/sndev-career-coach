@@ -17,9 +17,13 @@ export function validateEmail(email) {
   return emailRegex.test(email)
 }
 
-export function scrollToElement(elementId) {
-  const element = document.getElementById(elementId)
+export function scrollToElement(selector) {
+  const element = document.querySelector(selector)
   if (element) {
     element.scrollIntoView({ behavior: 'smooth' })
   }
+}
+
+export function navigateTo(path) {
+  window.location.href = path
 }
