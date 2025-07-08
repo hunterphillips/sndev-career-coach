@@ -44,16 +44,19 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-4">Contact</h4>
             <div className="space-y-2 text-gray-300">
-              <div className="whitespace-nowrap">
-                📧 hunterphillips@sndevcoach.com
-              </div>
-              <div>⏰ Mon-Fri 9AM-6PM EST</div>
+              <div className="whitespace-nowrap">📧 info@sndevcoach.com</div>
+              {/* <div>⏰ Mon-Fri 9AM-6PM EST</div> */}
             </div>
           </div>
         </div>
 
         <div className="border-t border-gray-700 mt-12 pt-8 text-center text-gray-400">
           <p>&copy; 2025 sn-dev-coach. All rights reserved.</p>
+          <p className="mt-4 text-sm text-gray-500 max-w-4xl mx-auto">
+            Disclaimer: This site is a personal project and is not affiliated
+            with or endorsed by my employer, IntegrityPro Consulting, or
+            ServiceNow. The views and services offered here are solely my own.
+          </p>
         </div>
       </div>
     </footer>

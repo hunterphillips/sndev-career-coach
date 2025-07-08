@@ -13,7 +13,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative h-screen flex items-center justify-center overflow-hidden">
+    <section id="hero" className="relative h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <div className="w-full h-full bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900"></div>
