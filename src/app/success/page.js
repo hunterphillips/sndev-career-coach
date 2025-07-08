@@ -1,12 +1,12 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { scheduleCoachingSession } from '@/lib/booking';
 import { navigateTo } from '@/lib/utils';
 
-// Success page displayed after successful Stripe payment
-export default function Success() {
+// Component that uses useSearchParams
+function SuccessContent() {
   const searchParams = useSearchParams();
   const sessionId = searchParams.get('session_id'); // Extract session ID from URL
   const [sessionData, setSessionData] = useState(null); // Store payment session data
@@ -125,5 +125,14 @@ export default function Success() {
         </div>
       </div>
     </div>
+  );
+}
+
+// Success page displayed after successful Stripe payment
+export default function Success() {
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-gray-50 flex items-center justify-center">Loading...</div>}>
+      <SuccessContent />
+    </Suspense>
   );
 }
