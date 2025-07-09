@@ -14,10 +14,7 @@ export default function Booking() {
         </p>
 
         <div className="grid md:grid-cols-2 gap-8 mb-12">
-          <div
-            className="border-2 border-gray-200 rounded-xl p-8 hover:bg-blue-50 hover:border-blue-500 transition-ease"
-            onClick={scheduleCoachingSession}
-          >
+          <div className="border-2 border-gray-200 rounded-xl p-8 hover:bg-blue-50 hover:border-blue-500 transition-ease">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">
               Free Consultation
             </h3>
@@ -33,10 +30,7 @@ export default function Booking() {
             </button>
           </div>
 
-          <div
-            className="border-2 rounded-xl p-8 hover:bg-blue-50 hover:border-blue-500 transition-ease"
-            onClick={scheduleCoachingSession}
-          >
+          <div className="border-2 rounded-xl p-8 hover:bg-blue-50 hover:border-blue-500 transition-ease">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">
               1-on-1 Coaching
             </h3>

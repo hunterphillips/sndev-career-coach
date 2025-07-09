@@ -97,7 +97,7 @@ export default function About() {
                   <p className="text-lg text-gray-700 leading-relaxed mb-4">
                     If you want to know the magic secrets to a lucrative career
                     in tech and ServiceNow, please book a session once you've
-                    found them so you can share them with me 🙂.
+                    found them so you can share them with me 🙏.
                   </p>
 
                   <p className="text-lg text-gray-700 leading-relaxed mb-4">
@@ -108,9 +108,9 @@ export default function About() {
                   </p>
 
                   <p className="text-lg text-gray-700 leading-relaxed">
-                    Whether you're looking to break into ServiceNow, advance to
-                    senior roles, or make a career pivot, I'm here to help you
-                    get there.
+                    Whether you're new to ServiceNow, ready to level up into
+                    senior roles, or considering a career shift, I'm here to
+                    help get you there.
                   </p>
 
                   <div className="mt-8 p-4 bg-gray-50 border-l-4 border-blue-500 rounded-r-lg">

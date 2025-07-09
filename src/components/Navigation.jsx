@@ -7,6 +7,7 @@ export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [currentSection, setCurrentSection] = useState('hero');
 
+  // Track current section based on scroll position for navigation styling
   useEffect(() => {
     const handleScroll = () => {
       const sections = ['hero', 'services', 'testimonials', 'booking'];
