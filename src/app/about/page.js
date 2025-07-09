@@ -6,7 +6,7 @@ import { useState, useEffect } from 'react';
 
 export default function About() {
   const [credentialsOpen, setCredentialsOpen] = useState(true);
-  
+
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 640) {
@@ -15,12 +15,12 @@ export default function About() {
         setCredentialsOpen(true);
       }
     };
-    
+
     handleResize();
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
-  
+
   const credentials = [
     'Certified Technical Architect',
     '50+ implementations',
@@ -51,7 +51,9 @@ export default function About() {
                     onClick={() => setCredentialsOpen(!credentialsOpen)}
                     className="flex items-center text-gray-700 hover:text-gray-900 transition-colors mb-3"
                   >
-                    <span className="text-sm font-medium mr-2">Credentials</span>
+                    <span className="text-sm font-medium mr-2">
+                      Credentials
+                    </span>
                     <svg
                       className={`w-4 h-4 transition-transform ${
                         credentialsOpen ? 'rotate-180' : ''
@@ -68,7 +70,7 @@ export default function About() {
                       />
                     </svg>
                   </button>
-                  
+
                   {credentialsOpen && (
                     <div className="space-y-2">
                       {credentials.map((credential, index) => (
@@ -76,7 +78,9 @@ export default function About() {
                           key={index}
                           className="flex items-center text-gray-600"
                         >
-                          <span className="text-xs ml-1 mb-1">{credential}</span>
+                          <span className="text-xs ml-1 mb-1">
+                            {credential}
+                          </span>
                         </div>
                       ))}
                     </div>
@@ -99,7 +103,7 @@ export default function About() {
                   <p className="text-lg text-gray-700 leading-relaxed mb-4">
                     I can't promise you a shortcut to success, but I can share
                     with you everything I've learned starting as a QA Analyst
-                    making $10/hr (landed a $.50 promotion after 2 months 🚀),
+                    making $10/hr (landed a $0.50 promotion after 2 months 🚀),
                     to earning over 6 figures in under 4 years.
                   </p>
 

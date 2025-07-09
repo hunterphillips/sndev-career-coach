@@ -47,7 +47,7 @@ export default function Hero() {
       </div>
 
       {/* Salary timeline */}
-      <div className="absolute bottom-20 w-full">
+      <div className="absolute bottom-4 sm:bottom-20 w-full">
         <CareerTimeline />
       </div>
 

@@ -12,6 +12,7 @@ export const metadata = {
     'ServiceNow coaching, ServiceNow career mentor, ServiceNow architect help, ServiceNow developer interview prep, ServiceNow certification guidance, platform architect coaching, ServiceNow career advancement',
   authors: [{ name: 'Hunter Phillips' }],
   creator: 'Hunter Phillips',
+  viewport: 'width=device-width, initial-scale=1',
   openGraph: {
     type: 'website',
     locale: 'en_US',
@@ -30,7 +31,6 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <head></head>
       <body className={`${inter.className} antialiased`}>
         <Script src="https://js.stripe.com/v3/" strategy="beforeInteractive" />
         {children}
