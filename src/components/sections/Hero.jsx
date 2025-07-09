@@ -15,7 +15,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative h-screen flex items-center justify-center overflow-hidden pt-8"
+      className="relative h-screen flex items-center justify-center overflow-hidden"
     >
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
@@ -25,23 +25,23 @@ export default function Hero() {
 
       {/* Hero Content */}
       <div className="relative z-10 text-center text-white px-6 max-w-4xl mx-auto">
-        <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+        <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-6 leading-tight">
           Accelerate Your
           <span className="block text-blue-300">ServiceNow Career</span>
         </h1>
-        <p className="text-xl md:text-2xl mb-8 opacity-90 max-w-2xl mx-auto">
+        <p className="text-lg sm:text-xl md:text-2xl mb-8 opacity-90 max-w-2xl mx-auto">
           Expert coaching to help you master ServiceNow, land your dream role,
           and advance your career in the platform ecosystem.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <button
-            className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors cursor-pointer"
+            className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-lg text-base sm:text-lg font-semibold transition-colors cursor-pointer"
             onClick={scrollToBooking}
           >
             Free intro call
           </button>
           <button
-            className="border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg text-lg font-semibold transition-colors cursor-pointer"
+            className="border-2 border-white text-white hover:bg-white hover:text-blue-900 px-6 py-3 sm:px-8 sm:py-4 rounded-lg text-base sm:text-lg font-semibold transition-colors cursor-pointer"
             onClick={scrollToServices}
           >
             Learn More
@@ -50,7 +50,7 @@ export default function Hero() {
       </div>
 
       {/* Salary timeline */}
-      <div className="absolute bottom-4 sm:bottom-20 w-full">
+      <div className="absolute bottom-4 w-full">
         <CareerTimeline />
       </div>
 
