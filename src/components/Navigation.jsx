@@ -172,6 +172,12 @@ export default function Navigation() {
                 Services
               </button>
               <button
+                onClick={() => handleNavClick('testimonials')}
+                className={`${getTextStyles()} hover:opacity-80 transition-opacity block px-3 py-2 text-base font-medium w-full text-left`}
+              >
+                Testimonials
+              </button>
+              <button
                 onClick={() => handleNavClick('booking')}
                 className={`${getTextStyles()} hover:opacity-80 transition-opacity block px-3 py-2 text-base font-medium w-full text-left`}
               >
