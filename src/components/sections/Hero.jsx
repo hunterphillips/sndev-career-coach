@@ -30,8 +30,8 @@ export default function Hero() {
           <span className="block text-blue-300">ServiceNow Career</span>
         </h1>
         <p className="text-base sm:text-xl md:text-2xl mb-6 sm:mb-8 opacity-90 max-w-2xl mx-auto">
-          Expert coaching to help you master ServiceNow, land your dream role,
-          and advance your career in the platform ecosystem.
+          Learn what really matters to help you stand out and navigate your
+          career and the job market with confidence.
         </p>
         <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
           <button

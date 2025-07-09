@@ -102,15 +102,15 @@ export default function About() {
 
                   <p className="text-lg text-gray-700 leading-relaxed mb-4">
                     I can't promise you a shortcut to success, but I can share
-                    with you everything I've learned starting as a QA Analyst
-                    making $10/hr (landed a $0.50 promotion after 2 months 🚀),
-                    to earning over 6 figures in under 4 years.
+                    with you exactly what I wish someone had told me years ago,
+                    and everything I've learned starting as a QA Analyst making
+                    $10/hr (landed a $0.50 promotion after 2 months 🚀), to
+                    earning over 6 figures in under 4 years.
                   </p>
 
                   <p className="text-lg text-gray-700 leading-relaxed">
-                    Whether you're new to ServiceNow, ready to level up into
-                    senior roles, or considering a career shift, I'm here to
-                    help get you there.
+                    Whether you're new to ServiceNow or ready to level up into
+                    senior and architect roles, I'm here to help get you there.
                   </p>
 
                   <div className="mt-8 p-4 bg-gray-50 border-l-4 border-blue-500 rounded-r-lg">
