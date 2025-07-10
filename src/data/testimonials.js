@@ -1,0 +1,32 @@
+export const testimonials = [
+  {
+    id: 1,
+    name: "Sarah Johnson",
+    role: "ServiceNow Developer",
+    company: "Tech Corp",
+    avatar: "S",
+    avatarColor: "bg-blue-500",
+    quote: "The coaching helped me transition from a junior admin to a senior developer role. The technical guidance was invaluable.",
+    rating: 5,
+  },
+  {
+    id: 2,
+    name: "Michael Chen",
+    role: "Solution Architect",
+    company: "Enterprise Solutions",
+    avatar: "M",
+    avatarColor: "bg-green-500",
+    quote: "Landed my dream role as a ServiceNow architect after just 3 coaching sessions. The interview prep was spot-on.",
+    rating: 5,
+  },
+  {
+    id: 3,
+    name: "Alex Rodriguez",
+    role: "Platform Admin",
+    company: "Global Services",
+    avatar: "A",
+    avatarColor: "bg-purple-500",
+    quote: "From zero ServiceNow knowledge to certified admin in 6 months. The structured approach made all the difference.",
+    rating: 5,
+  },
+];
