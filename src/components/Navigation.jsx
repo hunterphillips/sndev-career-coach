@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { scrollToElement } from '@/lib/utils';
+import { navigationConfig } from '@/data/navigation';
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -10,10 +11,9 @@ export default function Navigation() {
   // Track current section based on scroll position for navigation styling
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['hero', 'services', 'testimonials', 'booking'];
       const scrollPosition = window.scrollY + 100;
 
-      for (const section of sections) {
+      for (const section of navigationConfig.sections) {
         const element = document.getElementById(
           section === 'hero' ? 'hero' : section
         );
@@ -39,48 +39,42 @@ export default function Navigation() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleNavClick = (sectionId) => {
-    if (sectionId === 'hero') {
+  const handleNavClick = (menuItem) => {
+    if (menuItem.type === 'page') {
+      window.location.href = menuItem.href;
+    } else if (menuItem.sectionId === 'hero') {
       if (window.location.pathname === '/') {
         window.scrollTo({ top: 0, behavior: 'smooth' });
       } else {
         window.location.href = '/';
       }
-    } else if (sectionId === 'about') {
-      window.location.href = '/about';
     } else {
       if (window.location.pathname === '/') {
-        scrollToElement(`#${sectionId}`);
+        scrollToElement(`#${menuItem.sectionId}`);
       } else {
-        window.location.href = `/#${sectionId}`;
+        window.location.href = `/#${menuItem.sectionId}`;
       }
     }
     setIsMenuOpen(false);
   };
 
   const getNavStyles = () => {
-    const baseStyles =
-      'fixed top-0 left-0 right-0 z-50 transition-all duration-300';
-
-    switch (currentSection) {
-      case 'hero':
-        return `${baseStyles} bg-blue-900/90 backdrop-blur-sm border-b border-blue-800/50`;
-      case 'testimonials':
-        return `${baseStyles} bg-gray-50/95 backdrop-blur-sm border-b border-gray-200/50 text-gray-900`;
-      default:
-        return `${baseStyles} bg-white/95 backdrop-blur-sm border-b border-gray-200/50 text-gray-900`;
-    }
+    const baseStyles = 'fixed top-0 left-0 right-0 z-50 transition-all duration-300';
+    const sectionStyles = navigationConfig.styling.sections[currentSection] || 
+                         navigationConfig.styling.sections.default;
+    return `${baseStyles} ${sectionStyles.nav}`;
   };
 
   const getTextStyles = () => {
-    return currentSection === 'hero' ? 'text-white' : 'text-gray-900';
+    const sectionStyles = navigationConfig.styling.sections[currentSection] || 
+                         navigationConfig.styling.sections.default;
+    return sectionStyles.text;
   };
 
   const getButtonStyles = () => {
-    if (currentSection === 'hero') {
-      return 'text-white hover:text-blue-300 border-white hover:border-blue-300';
-    }
-    return 'text-gray-900 hover:text-blue-600 border-gray-300 hover:border-blue-600';
+    const sectionStyles = navigationConfig.styling.sections[currentSection] || 
+                         navigationConfig.styling.sections.default;
+    return sectionStyles.button;
   };
 
   return (
@@ -90,34 +84,25 @@ export default function Navigation() {
           {/* Logo */}
           <div className="flex-shrink-0">
             <button
-              onClick={() => handleNavClick('hero')}
+              onClick={() => handleNavClick(navigationConfig.brand)}
               className={`text-lg font-mono opacity-40 font-bold ${getTextStyles()} hover:opacity-80 transition-opacity`}
             >
-              [sn dev coach]
+              {navigationConfig.brand.name}
             </button>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8 ">
-              <button
-                onClick={() => handleNavClick('services')}
-                className={`${getButtonStyles()} hover:opacity-80 transition-opacity px-3 py-2 text-sm font-medium`}
-              >
-                Services
-              </button>
-              <button
-                onClick={() => handleNavClick('booking')}
-                className={`${getButtonStyles()} hover:opacity-80 transition-opacity px-3 py-2 text-sm font-medium`}
-              >
-                Book a Session
-              </button>
-              <button
-                onClick={() => handleNavClick('about')}
-                className={`${getButtonStyles()} hover:opacity-80 transition-opacity px-3 py-2 text-sm font-medium`}
-              >
-                About me
-              </button>
+              {navigationConfig.menuItems.map((item) => (
+                <button
+                  key={item.id}
+                  onClick={() => handleNavClick(item)}
+                  className={`${getButtonStyles()} hover:opacity-80 transition-opacity px-3 py-2 text-sm font-medium`}
+                >
+                  {item.label}
+                </button>
+              ))}
             </div>
           </div>
 
@@ -165,30 +150,15 @@ export default function Navigation() {
         {isMenuOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 border-t border-gray-200/20">
-              <button
-                onClick={() => handleNavClick('services')}
-                className={`${getTextStyles()} hover:opacity-80 transition-opacity block px-3 py-2 text-base font-medium w-full text-left`}
-              >
-                Services
-              </button>
-              <button
-                onClick={() => handleNavClick('testimonials')}
-                className={`${getTextStyles()} hover:opacity-80 transition-opacity block px-3 py-2 text-base font-medium w-full text-left`}
-              >
-                Testimonials
-              </button>
-              <button
-                onClick={() => handleNavClick('booking')}
-                className={`${getTextStyles()} hover:opacity-80 transition-opacity block px-3 py-2 text-base font-medium w-full text-left`}
-              >
-                Book a Session
-              </button>
-              <button
-                onClick={() => handleNavClick('about')}
-                className={`${getTextStyles()} hover:opacity-80 transition-opacity block px-3 py-2 text-base font-medium w-full text-left`}
-              >
-                About Me
-              </button>
+              {navigationConfig.menuItems.map((item) => (
+                <button
+                  key={item.id}
+                  onClick={() => handleNavClick(item)}
+                  className={`${getTextStyles()} hover:opacity-80 transition-opacity block px-3 py-2 text-base font-medium w-full text-left`}
+                >
+                  {item.label}
+                </button>
+              ))}
             </div>
           </div>
         )}
