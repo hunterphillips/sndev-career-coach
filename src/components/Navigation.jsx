@@ -59,21 +59,25 @@ export default function Navigation() {
   };
 
   const getNavStyles = () => {
-    const baseStyles = 'fixed top-0 left-0 right-0 z-50 transition-all duration-300';
-    const sectionStyles = navigationConfig.styling.sections[currentSection] || 
-                         navigationConfig.styling.sections.default;
+    const baseStyles =
+      'fixed top-0 left-0 right-0 z-50 transition-all duration-300';
+    const sectionStyles =
+      navigationConfig.styling.sections[currentSection] ||
+      navigationConfig.styling.sections.default;
     return `${baseStyles} ${sectionStyles.nav}`;
   };
 
   const getTextStyles = () => {
-    const sectionStyles = navigationConfig.styling.sections[currentSection] || 
-                         navigationConfig.styling.sections.default;
+    const sectionStyles =
+      navigationConfig.styling.sections[currentSection] ||
+      navigationConfig.styling.sections.default;
     return sectionStyles.text;
   };
 
   const getButtonStyles = () => {
-    const sectionStyles = navigationConfig.styling.sections[currentSection] || 
-                         navigationConfig.styling.sections.default;
+    const sectionStyles =
+      navigationConfig.styling.sections[currentSection] ||
+      navigationConfig.styling.sections.default;
     return sectionStyles.button;
   };
 
