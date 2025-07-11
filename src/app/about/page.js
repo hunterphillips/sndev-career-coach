@@ -103,9 +103,9 @@ export default function About() {
                   <p className="text-lg text-gray-700 leading-relaxed mb-4">
                     I can't promise you a shortcut to success, but I can share
                     with you exactly what I wish someone had told me years ago,
-                    and everything I've learned starting as a QA Analyst making
-                    $10/hr (landed a $0.50 promotion after 2 months 🚀), to
-                    earning over 6 figures in under 4 years.
+                    and everything I've learned starting as an entry-level QA
+                    tester making $10/hr (landed a $0.50 promotion after 2
+                    months 🚀), to earning over 6 figures in under 4 years.
                   </p>
 
                   <p className="text-lg text-gray-700 leading-relaxed">
