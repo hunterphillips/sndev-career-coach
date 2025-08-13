@@ -1,8 +1,8 @@
 const milestones = [
   { title: 'CSA', salary: '$60K' },
   { title: 'Developer', salary: '$90K' },
-  { title: 'Senior Developer', salary: '$125K' },
-  { title: 'Lead Developer', salary: '$160K' },
+  { title: 'Senior Developer', salary: '$130K' },
+  { title: 'Lead Developer', salary: '$170K' },
   { title: 'CTA', salary: '$200K+' },
 ];
 
