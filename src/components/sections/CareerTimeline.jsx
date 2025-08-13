@@ -1,13 +1,13 @@
 const milestones = [
-  { title: 'CSA', salary: '$60K' },
+  // { title: 'CSA', salary: '$60K' },
   { title: 'Developer', salary: '$90K' },
   { title: 'Senior Developer', salary: '$125K' },
-  { title: 'Lead Developer', salary: '$150K' },
+  { title: 'Lead Developer', salary: '$160K' },
   { title: 'CTA', salary: '$200K+' },
 ];
 
 export default function CareerTimeline() {
-  const timeline = [...milestones, ...milestones];
+  const timeline = [...milestones, ...milestones, ...milestones, ...milestones];
   return (
     <div className="flex flex-col items-center px-4 py-12">
       <div className="relative w-full max-w-7xl overflow-hidden">
