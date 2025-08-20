@@ -1,14 +1,50 @@
 import { NextResponse } from 'next/server';
 import Stripe from 'stripe';
+import { sessionRateLimit, getClientIP } from '@/lib/rate-limit';
+import { sessionIdSchema } from '@/lib/validation';
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
 export async function GET(request) {
+  // Apply rate limiting
+  const ip = getClientIP(request);
+  const { success, limit, reset, remaining } = await sessionRateLimit.limit(ip);
+
+  if (!success) {
+    return NextResponse.json(
+      { 
+        error: 'Too many requests. Please try again later.',
+        retryAfter: Math.round((reset - Date.now()) / 1000)
+      },
+      { 
+        status: 429,
+        headers: {
+          'X-RateLimit-Limit': limit.toString(),
+          'X-RateLimit-Remaining': remaining.toString(),
+          'X-RateLimit-Reset': new Date(reset).toISOString(),
+        }
+      }
+    );
+  }
+
   const { searchParams } = new URL(request.url);
   const sessionId = searchParams.get('session_id');
 
   if (!sessionId) {
     return NextResponse.json({ error: 'Session ID required' }, { status: 400 });
+  }
+
+  // Validate session ID format
+  try {
+    sessionIdSchema.parse(sessionId);
+  } catch (error) {
+    return NextResponse.json(
+      { 
+        error: 'Invalid session ID format',
+        details: error.errors?.map(e => e.message) 
+      },
+      { status: 400 }
+    );
   }
 
   try {
