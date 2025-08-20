@@ -1,9 +1,9 @@
 const milestones = [
-  { title: 'CSA', salary: '$60K' },
+  { title: 'Administrator', salary: '$60K' },
   { title: 'Developer', salary: '$90K' },
   { title: 'Senior Developer', salary: '$130K' },
   { title: 'Lead Developer', salary: '$170K' },
-  { title: 'CTA', salary: '$200K+' },
+  { title: 'Architect', salary: '$200K+' },
 ];
 
 export default function CareerTimeline() {
