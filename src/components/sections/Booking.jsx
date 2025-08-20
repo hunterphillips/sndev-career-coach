@@ -35,8 +35,8 @@ export default function Booking() {
               1-on-1 Coaching
             </h3>
             <p className="text-gray-600 mb-6">
-              Personalized coaching sessions tailored to your specific
-              ServiceNow career goals
+              Personalized coaching sessions tailored to your ServiceNow career
+              goals
             </p>
             <button
               className="w-full bg-blue-500 hover:bg-blue-600 text-white py-3 rounded-lg font-semibold transition-colors cursor-pointer"
