@@ -1,13 +1,26 @@
-import { Ratelimit, MemoryStore } from '@upstash/ratelimit';
+import { Ratelimit } from '@upstash/ratelimit';
 import { Redis } from '@upstash/redis';
 
-// Use in-memory store for development, Redis for production
+// Use Redis for production, or create a mock for development
 const redis = process.env.UPSTASH_REDIS_REST_URL
   ? new Redis({
       url: process.env.UPSTASH_REDIS_REST_URL,
       token: process.env.UPSTASH_REDIS_REST_TOKEN,
     })
-  : new MemoryStore();
+  : {
+      // Simple in-memory mock for development
+      storage: new Map(),
+      async get(key) { return this.storage.get(key) || null; },
+      async set(key, value, opts) { 
+        this.storage.set(key, value);
+        if (opts?.ex) {
+          setTimeout(() => this.storage.delete(key), opts.ex * 1000);
+        }
+        return 'OK';
+      },
+      async eval() { return null; },
+      async evalsha() { return null; },
+    };
 
 // Rate limiter for payment creation (more restrictive)
 export const paymentRateLimit = new Ratelimit({
