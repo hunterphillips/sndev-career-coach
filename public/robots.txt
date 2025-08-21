@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://sndevcoach.com/sitemap.xml
+
+# Block common areas that shouldn't be indexed
+Disallow: /api/
+Disallow: /_next/
+Disallow: /admin/
