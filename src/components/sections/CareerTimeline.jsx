@@ -8,10 +8,10 @@ const milestones = [
 
 export default function CareerTimeline() {
   return (
-    <div className="flex flex-col items-center px-4 py-12">
+    <div className="flex flex-col items-center px-4 py-8">
       <div className="relative w-full max-w-7xl overflow-hidden">
         {/* Timeline Line */}
-        <div className="absolute top-1/2 left-0 w-full h-px bg-gray-300 z-0 transform -translate-y-1/2" />
+        {/* <div className="absolute top-1/2 left-0 w-full h-px bg-gray-600 z-0 transform -translate-y-1/2" /> */}
 
         {/* Scrolling Timeline Container */}
         <div className="relative z-10 flex animate-scroll-left">
@@ -20,11 +20,10 @@ export default function CareerTimeline() {
             {milestones.map(({ title, salary }, index) => (
               <div
                 key={`first-${index}`}
-                className="flex flex-col items-center text-center flex-shrink-0"
-                className="w-32 sm:w-40 md:w-48 lg:w-56"
+                className="flex flex-col items-center text-center flex-shrink-0 w-32 sm:w-40 md:w-48 lg:w-56"
               >
-                <div className="text-sm text-gray-400 font-medium">{title}</div>
-                <div className="text-gray-300 text-sm">{salary}</div>
+                <div className="text-sm text-white font-medium">{title}</div>
+                <div className="text-gray-300 text-md font-bold">{salary}</div>
               </div>
             ))}
           </div>
@@ -33,11 +32,10 @@ export default function CareerTimeline() {
             {milestones.map(({ title, salary }, index) => (
               <div
                 key={`second-${index}`}
-                className="flex flex-col items-center text-center flex-shrink-0"
-                className="w-32 sm:w-40 md:w-48 lg:w-56"
+                className="flex flex-col items-center text-center flex-shrink-0 w-32 sm:w-40 md:w-48 lg:w-56"
               >
-                <div className="text-sm text-gray-400 font-medium">{title}</div>
-                <div className="text-gray-300 text-sm">{salary}</div>
+                <div className="text-sm text-white font-medium">{title}</div>
+                <div className="text-gray-300 text-md font-bold">{salary}</div>
               </div>
             ))}
           </div>
@@ -53,7 +51,7 @@ export default function CareerTimeline() {
             transform: translateX(-640px);
           }
         }
-        
+
         @media (min-width: 640px) {
           @keyframes scroll-left {
             0% {
@@ -64,7 +62,7 @@ export default function CareerTimeline() {
             }
           }
         }
-        
+
         @media (min-width: 768px) {
           @keyframes scroll-left {
             0% {
@@ -75,7 +73,7 @@ export default function CareerTimeline() {
             }
           }
         }
-        
+
         @media (min-width: 1024px) {
           @keyframes scroll-left {
             0% {
