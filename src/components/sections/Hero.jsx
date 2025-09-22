@@ -26,7 +26,9 @@ export default function Hero() {
       <div className="relative z-10 text-center text-white px-6 max-w-4xl mx-auto">
         <h1 className="text-2xl sm:text-1xl md:text-7xl font-bold mb-4 sm:mb-6 leading-tight">
           Accelerate Your
-          <span className="block text-blue-300">ServiceNow Career</span>
+          <span className="block text-blue-300">
+            <span className="servicenow-brand">ServiceNow</span> Career
+          </span>
         </h1>
         <p className="text-base sm:text-xl md:text-2xl mb-6 sm:mb-8 opacity-90 max-w-2xl mx-auto">
           Learn what really matters to help you stand out and navigate your
