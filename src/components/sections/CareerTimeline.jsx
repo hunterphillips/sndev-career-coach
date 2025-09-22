@@ -21,7 +21,7 @@ export default function CareerTimeline() {
               <div
                 key={`first-${index}`}
                 className="flex flex-col items-center text-center flex-shrink-0"
-                style={{ width: 'max(calc(100vw / 5), 8rem)' }}
+                className="w-32 sm:w-40 md:w-48 lg:w-56"
               >
                 <div className="text-sm text-gray-400 font-medium">{title}</div>
                 <div className="text-gray-300 text-sm">{salary}</div>
@@ -34,7 +34,7 @@ export default function CareerTimeline() {
               <div
                 key={`second-${index}`}
                 className="flex flex-col items-center text-center flex-shrink-0"
-                style={{ width: 'max(calc(100vw / 5), 8rem)' }}
+                className="w-32 sm:w-40 md:w-48 lg:w-56"
               >
                 <div className="text-sm text-gray-400 font-medium">{title}</div>
                 <div className="text-gray-300 text-sm">{salary}</div>
@@ -50,7 +50,40 @@ export default function CareerTimeline() {
             transform: translateX(0);
           }
           100% {
-            transform: translateX(calc(-5 * max(calc(100vw / 5), 8rem)));
+            transform: translateX(-640px);
+          }
+        }
+        
+        @media (min-width: 640px) {
+          @keyframes scroll-left {
+            0% {
+              transform: translateX(0);
+            }
+            100% {
+              transform: translateX(-800px);
+            }
+          }
+        }
+        
+        @media (min-width: 768px) {
+          @keyframes scroll-left {
+            0% {
+              transform: translateX(0);
+            }
+            100% {
+              transform: translateX(-960px);
+            }
+          }
+        }
+        
+        @media (min-width: 1024px) {
+          @keyframes scroll-left {
+            0% {
+              transform: translateX(0);
+            }
+            100% {
+              transform: translateX(-1120px);
+            }
           }
         }
 

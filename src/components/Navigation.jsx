@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { scrollToElement } from '@/lib/utils';
 import { navigationConfig } from '@/data/navigation';
+import Image from 'next/image';
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

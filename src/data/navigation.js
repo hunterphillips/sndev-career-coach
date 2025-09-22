@@ -4,6 +4,7 @@ export const navigationConfig = {
     href: '/',
     sectionId: 'hero',
   },
+  logo: '/images/logo-bg-removed.png',
   sections: ['hero', 'services', 'testimonials', 'booking'],
   menuItems: [
     {
