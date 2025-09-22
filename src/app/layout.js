@@ -12,6 +12,9 @@ export const metadata = {
     'ServiceNow coaching, ServiceNow career mentor, ServiceNow architect help, ServiceNow developer interview prep, ServiceNow certification guidance, platform architect coaching, ServiceNow career advancement',
   authors: [{ name: 'Hunter Phillips' }],
   creator: 'Hunter Phillips',
+  alternates: {
+    canonical: process.env.NEXT_PUBLIC_SITE_URL,
+  },
   openGraph: {
     type: 'website',
     locale: 'en_US',
@@ -49,6 +52,61 @@ export default function RootLayout({ children }) {
             gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}');
           `}
         </Script>
+        <Script
+          id="structured-data"
+          type="application/ld+json"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@graph': [
+                {
+                  '@type': 'Organization',
+                  '@id': `${process.env.NEXT_PUBLIC_SITE_URL}/#organization`,
+                  name: 'SN Dev Coach',
+                  url: process.env.NEXT_PUBLIC_SITE_URL,
+                  logo: {
+                    '@type': 'ImageObject',
+                    url: `${process.env.NEXT_PUBLIC_SITE_URL}/images/profile.jpg`,
+                  },
+                  founder: {
+                    '@type': 'Person',
+                    name: 'Hunter Phillips',
+                  },
+                  description:
+                    '1:1 coaching and mentorship for ServiceNow developers, architects, and aspiring professionals.',
+                },
+                {
+                  '@type': 'ProfessionalService',
+                  '@id': `${process.env.NEXT_PUBLIC_SITE_URL}/#service`,
+                  name: 'ServiceNow Developer Career Coaching',
+                  provider: {
+                    '@id': `${process.env.NEXT_PUBLIC_SITE_URL}/#organization`,
+                  },
+                  serviceType: 'Career Coaching',
+                  description:
+                    'Expert guidance on ServiceNow career growth, platform mastery, certifications, interviews, and professional development.',
+                  areaServed: 'Worldwide',
+                  hasOfferCatalog: {
+                    '@type': 'OfferCatalog',
+                    name: 'Coaching Services',
+                    itemListElement: [
+                      {
+                        '@type': 'Offer',
+                        itemOffered: {
+                          '@type': 'Service',
+                          name: '1:1 Career Coaching Session',
+                          description:
+                            'Personalized coaching session for ServiceNow developers and architects',
+                        },
+                      },
+                    ],
+                  },
+                },
+              ],
+            }),
+          }}
+        />
         {children}
       </body>
     </html>
