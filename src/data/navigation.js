@@ -36,7 +36,7 @@ export const navigationConfig = {
   styling: {
     sections: {
       hero: {
-        nav: 'bg-blue-900/90 backdrop-blur-sm border-b border-blue-800/50',
+        nav: 'bg-gray-900/90 backdrop-blur-sm border-b border-gray-700/50',
         text: 'text-white',
         button:
           'text-white hover:text-blue-300 border-white hover:border-blue-300',
