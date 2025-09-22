@@ -40,7 +40,7 @@ export default function About() {
               <div className="flex flex-col sm:flex-row sm:gap-6 md:flex-col md:gap-0 flex-shrink-0">
                 <Image
                   src="/images/profile-memphis.jpg"
-                  alt="Profile"
+                  alt="Hunter Phillips - ServiceNow Technical Architect and Career Coach"
                   width={1536}
                   height={2048}
                   className="w-60 h-80 rounded-lg object-cover"

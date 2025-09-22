@@ -11,22 +11,22 @@ export const testimonials = [
   },
   {
     id: 2,
-    name: 'Michael Chen',
+    name: 'Michael C.',
     role: 'Solution Architect',
     avatar: 'M',
     avatarColor: 'bg-green-500',
     quote:
-      'Landed my dream role as a ServiceNow architect after just 3 coaching sessions. The interview prep was spot-on.',
+      'Hunter is a flexible, reliable, and highly skilled resource who always delivers. His depth of knowledge is apparent every time a question arises about the platform.',
     rating: 5,
   },
   {
     id: 3,
-    name: 'Alex Rodriguez',
+    name: 'Alex R.',
     role: 'Platform Admin',
     avatar: 'A',
     avatarColor: 'bg-purple-500',
     quote:
-      'From zero ServiceNow knowledge to certified admin in 6 months. The structured approach made all the difference.',
+      'I was frustrated trying to get my foot in the door for months in a tough market. Got my first offer after 4 weeks of coaching.',
     rating: 5,
   },
 ];

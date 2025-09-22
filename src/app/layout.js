@@ -103,6 +103,90 @@ export default function RootLayout({ children }) {
                     ],
                   },
                 },
+                {
+                  '@type': 'Review',
+                  '@id': `${process.env.NEXT_PUBLIC_SITE_URL}/#review1`,
+                  reviewBody: "Hunter's mentorship was a game-changer in my ServiceNow career. His guidance was key in helping me make the jump from technical consultant to principal consultant.",
+                  reviewRating: {
+                    '@type': 'Rating',
+                    ratingValue: 5,
+                    bestRating: 5,
+                    worstRating: 1
+                  },
+                  author: {
+                    '@type': 'Person',
+                    name: 'Aaron W.'
+                  },
+                  itemReviewed: {
+                    '@id': `${process.env.NEXT_PUBLIC_SITE_URL}/#service`
+                  }
+                },
+                {
+                  '@type': 'Review',
+                  '@id': `${process.env.NEXT_PUBLIC_SITE_URL}/#review2`,
+                  reviewBody: 'Hunter is a flexible, reliable, and highly skilled resource who always delivers. His depth of knowledge is apparent every time a question arises about the platform.',
+                  reviewRating: {
+                    '@type': 'Rating',
+                    ratingValue: 5,
+                    bestRating: 5,
+                    worstRating: 1
+                  },
+                  author: {
+                    '@type': 'Person',
+                    name: 'Michael C.'
+                  },
+                  itemReviewed: {
+                    '@id': `${process.env.NEXT_PUBLIC_SITE_URL}/#service`
+                  }
+                },
+                {
+                  '@type': 'Review',
+                  '@id': `${process.env.NEXT_PUBLIC_SITE_URL}/#review3`,
+                  reviewBody: 'I was frustrated trying to get my foot in the door for months in a tough market. Got my first offer after 4 weeks of coaching.',
+                  reviewRating: {
+                    '@type': 'Rating',
+                    ratingValue: 5,
+                    bestRating: 5,
+                    worstRating: 1
+                  },
+                  author: {
+                    '@type': 'Person',
+                    name: 'Alex R.'
+                  },
+                  itemReviewed: {
+                    '@id': `${process.env.NEXT_PUBLIC_SITE_URL}/#service`
+                  }
+                },
+                {
+                  '@type': 'FAQPage',
+                  '@id': `${process.env.NEXT_PUBLIC_SITE_URL}/#faq`,
+                  mainEntity: [
+                    {
+                      '@type': 'Question',
+                      name: 'What ServiceNow certifications should I pursue first?',
+                      acceptedAnswer: {
+                        '@type': 'Answer',
+                        text: 'Start with ServiceNow Certified System Administrator (CSA) as the foundation, then pursue Certified Application Developer (CAD) for development roles or Certified Implementation Specialist (CIS) for specific modules like ITSM, ITOM, or HR.'
+                      }
+                    },
+                    {
+                      '@type': 'Question',
+                      name: 'How can I transition from ServiceNow admin to developer?',
+                      acceptedAnswer: {
+                        '@type': 'Answer',
+                        text: 'Focus on learning JavaScript fundamentals, GlideRecord API, Flow Designer, and Service Portal development. Build a portfolio with custom applications and workflows to demonstrate your development skills to potential employers.'
+                      }
+                    },
+                    {
+                      '@type': 'Question',
+                      name: 'What salary can I expect as a ServiceNow professional?',
+                      acceptedAnswer: {
+                        '@type': 'Answer',
+                        text: 'ServiceNow salaries range from $60K for administrators to $200K+ for architects. Developers typically earn $90K-$130K, Senior Developers $130K-$170K, and Lead Developers $170K+, depending on experience and location.'
+                      }
+                    }
+                  ]
+                }
               ],
             }),
           }}
