@@ -1,3 +1,5 @@
+![Site Home Page](public/images/homepage.png)
+
 # Career Coaching Site
 
 A modern, responsive landing page for career coaching services built with Next.js, JavaScript, and Tailwind CSS.
@@ -24,6 +26,7 @@ A modern, responsive landing page for career coaching services built with Next.j
 ## Getting Started
 
 1. **Clone and setup:**
+
    ```bash
    git clone <your-repository>
    cd career-coaching-landing
@@ -31,16 +34,18 @@ A modern, responsive landing page for career coaching services built with Next.j
    ```
 
 2. **Environment setup:**
+
    ```bash
    cp .env.example .env.local
    ```
-   
+
    Fill in your environment variables:
    - Stripe keys (test keys first)
    - Calendly URL
    - Analytics ID (optional)
 
 3. **Run development server:**
+
    ```bash
    npm run dev
    ```
