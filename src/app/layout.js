@@ -24,9 +24,16 @@ export const metadata = {
       'Get personalized coaching and expert guidance to level up your ServiceNow career. Ideal for developers, admins, architects, and professionals navigating the platform.',
     siteName: 'SN Dev Coach',
   },
+  // STEALTH MODE: Comment out to re-enable SEO
+  // robots: {
+  //   index: true,
+  //   follow: true,
+  // },
   robots: {
-    index: true,
-    follow: true,
+    index: false,
+    follow: false,
+    noindex: true,
+    nofollow: true,
   },
 };
 
@@ -40,7 +47,8 @@ export default function RootLayout({ children }) {
     <html lang="en" className="scroll-smooth">
       <body className={`${inter.className} antialiased`} suppressHydrationWarning>
         <Script src="https://js.stripe.com/v3/" strategy="beforeInteractive" />
-        <Script
+        {/* STEALTH MODE: Uncomment to re-enable Google Analytics */}
+        {/* <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
           strategy="afterInteractive"
         />
@@ -51,8 +59,9 @@ export default function RootLayout({ children }) {
             gtag('js', new Date());
             gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}');
           `}
-        </Script>
-        <Script
+        </Script> */}
+        {/* STEALTH MODE: Uncomment to re-enable structured data */}
+        {/* <Script
           id="structured-data"
           type="application/ld+json"
           strategy="afterInteractive"
@@ -190,7 +199,7 @@ export default function RootLayout({ children }) {
               ],
             }),
           }}
-        />
+        /> */}
         {children}
       </body>
     </html>

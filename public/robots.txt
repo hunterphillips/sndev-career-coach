@@ -1,10 +1,13 @@
+# STEALTH MODE: Uncomment Allow and Sitemap lines to re-enable SEO
 User-agent: *
-Allow: /
+Disallow: /
+
+# Allow: /
 
 # Sitemap location
-Sitemap: https://sndevcoach.com/sitemap.xml
+# Sitemap: https://sndevcoach.com/sitemap.xml
 
 # Block common areas that shouldn't be indexed
-Disallow: /api/
-Disallow: /_next/
-Disallow: /admin/
+# Disallow: /api/
+# Disallow: /_next/
+# Disallow: /admin/
