@@ -1,4 +1,4 @@
-# Career Coaching Landing Page
+# Career Coaching Site
 
 A modern, responsive landing page for career coaching services built with Next.js, JavaScript, and Tailwind CSS.
 
