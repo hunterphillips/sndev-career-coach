@@ -63,21 +63,3 @@ src/
 ├── types/             # JSDoc type definitions
 public/                # Static assets
 ```
-
-
-## Environment Variables
-
-Required environment variables:
-
-- `NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY` - Stripe publishable key
-- `STRIPE_SECRET_KEY` - Stripe secret key
-- `NEXT_PUBLIC_CALENDLY_URL` - Your Calendly booking link
-- `NEXT_PUBLIC_SITE_URL` - Your site URL (for production)
-
-## Scripts
-
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run start` - Start production server
-- `npm run lint` - Run ESLint
-- `npm run format` - Format code with Prettier
