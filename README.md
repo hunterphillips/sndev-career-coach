@@ -64,22 +64,6 @@ src/
 public/                # Static assets
 ```
 
-## Next Steps
-
-1. Configure your Stripe account and get API keys
-2. Set up your Calendly account and get booking URL
-3. Customize the content and branding
-4. Add your service packages and pricing
-5. Deploy to Vercel
-
-## Deployment
-
-The easiest way to deploy is using Vercel:
-
-1. Push your code to GitHub
-2. Connect your repository to Vercel
-3. Add environment variables in Vercel dashboard
-4. Deploy!
 
 ## Environment Variables
 
