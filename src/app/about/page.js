@@ -105,7 +105,7 @@ export default function About() {
                     with you exactly what I wish someone had told me years ago,
                     and everything I've learned starting as an entry-level QA
                     tester making $10/hr (landed a $0.50 promotion after 2
-                    months 🚀), to earning over 6 figures in under 4 years.
+                    months 🚀), to earning over 6 figures in under 3 years.
                   </p>
 
                   <p className="text-lg text-gray-700 leading-relaxed">
